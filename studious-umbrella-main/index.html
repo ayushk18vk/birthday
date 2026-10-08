@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Surprise for dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261007" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <div class="stars" id="stars"></div>
+      <div class="fireworks-layer" id="fireworksLayer"></div>
+      <div class="hearts-layer" id="heartsLayer"></div>
+      <div class="confetti-layer" id="confettiLayer"></div>
+    </div>
+
+    <section class="screen intro-screen active" id="introScreen">
+      <div class="glass-card intro-card surprise-card">
+        <p class="eyebrow">A little sparkle for your special day</p>
+        <h1>🎉 A surprise is waiting for you.</h1>
+        <p class="question">Open the surprise to reveal your birthday magic.</p>
+        <div class="button-row centered-button-row">
+          <button class="action-btn yes" id="yesBtn">Open Surprise</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen transition-screen" id="transitionScreen">
+      <div class="glass-card transition-card">
+        <h2>I knew you like surprises.</h2>
+        <p>So I made something special just for you.</p>
+        <p class="big">Get ready...</p>
+      </div>
+    </section>
+
+    <main class="screen birthday-page" id="birthdayPage">
+      <audio id="music" loop preload="auto"></audio>
+
+      <div class="page-shell">
+        <header class="glass-card hero-card">
+          <div class="hero-top">
+            <p class="eyebrow">For my favorite person</p>
+            <button class="audio-toggle" id="audioToggle" type="button">▶ Play Birthday Song</button>
+          </div>
+          <h1 class="neon-name" id="nameTitle">Happy Birthday, dev!</h1>
+          <p class="typing-text" id="typingText"></p>
+        </header>
+
+        <section class="glass-card cake-card">
+          <div class="cake-photo-shell">
+            <div class="cake-photo-frame">
+              <img class="cake-photo" src="cake-photo.png" alt="Birthday cake" />
+            </div>
+          </div>
+        </section>
+
+        <section class="glass-card gallery-card">
+          <div class="gallery-frame">
+            <img id="slideshowImage" src="image.png" alt="Birthday memories" />
+          </div>
+          <div class="slide-caption" id="slideCaption">A dreamy walk through lovely memories.</div>
+        </section>
+
+        <section class="glass-card wishes-card">
+          <h2>Birthday Wishes</h2>
+          <p>
+            Happy Birthday, dev! You light up every room with your smile, your kindness,
+            and your magical energy. May this year bring you joy, laughter, and countless
+            beautiful surprises.
+          </p>
+          <p>
+            Keep shining bright, keep dreaming big, and always remember that you deserve the
+            sweetest moments and the happiest memories.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div class="page-border" aria-hidden="true"></div>
+
+    <div class="modal" id="passwordModal" hidden>
+      <div class="modal-card glass-card password-card">
+        <h3>Unlock the surprise ✨</h3>
+        <p class="password-hint">Enter the secret code to unlock your surprise.</p>
+        <label class="password-label" for="passwordInput">Password</label>
+        <input id="passwordInput" type="password" placeholder="Enter password" autocomplete="off" />
+        <p id="passwordError" class="password-error" aria-live="polite"></p>
+        <div class="password-actions">
+          <button class="action-btn yes" id="unlockBtn" type="button">Unlock</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="surpriseModal" hidden>
+      <div class="modal-card glass-card">
+        <h3>Surprise Delivered ✨</h3>
+        <p>You are officially the king of the day, dev.</p>
+        <p>May your birthday feel as magical as your smile.</p>
+        <button class="action-btn yes" id="closeModalBtn">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js?v=20261007"></script>
+  </body>
+</html>
